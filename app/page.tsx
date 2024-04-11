@@ -48,27 +48,29 @@ export default async function IndexPage() {
     <div className={styles.container}>
       <h4 className="fw-light">Equipment</h4>
       <div className={styles.grid}>
-        {/* 1st header row */}
-        <div className={styles.topLeftHeaderCell} />
-        <div />
-        <div className={styles.vehicleNameHeaderCell}>
-          {firstRowItems[0].model_name} {firstRowItems[0].style_name}
+        <div className={styles.headerRows}>
+          {/* 1st header row */}
+          <div className={styles.topLeftHeaderCell} />
+          <div />
+          <div className={styles.vehicleNameHeaderCell}>
+            {firstRowItems[0].model_name} {firstRowItems[0].style_name}
+          </div>
+          <div />
+          <div className={styles.vehicleNameHeaderCell}>
+            {firstRowItems[1]?.model_name} {firstRowItems[1]?.style_name}
+          </div>
+          {/* 2nd header row */}
+          <div className={styles.headerCell}>OEM Name</div>
+          <div className={styles.headerCell}>OEM Code</div>
+          <div />
+          <div className={styles.headerCell}>Status</div>
+          <div className={styles.headerCell}>MSRP</div>
+          <div className={styles.headerCell}>Invoice</div>
+          <div />
+          <div className={styles.headerCell}>Status</div>
+          <div className={styles.headerCell}>MSRP</div>
+          <div className={styles.headerCell}>Invoice</div>
         </div>
-        <div />
-        <div className={styles.vehicleNameHeaderCell}>
-          {firstRowItems[1]?.model_name} {firstRowItems[1]?.style_name}
-        </div>
-        {/* 2nd header row */}
-        <div className={styles.headerCell}>OEM Name</div>
-        <div className={styles.headerCell}>OEM Code</div>
-        <div />
-        <div className={styles.headerCell}>Status</div>
-        <div className={styles.headerCell}>MSRP</div>
-        <div className={styles.headerCell}>Invoice</div>
-        <div />
-        <div className={styles.headerCell}>Status</div>
-        <div className={styles.headerCell}>MSRP</div>
-        <div className={styles.headerCell}>Invoice</div>
         {/* Data rows */}
         {rows.map((row: any) => {
           const items = JSON.parse(row.items).map(JSON.parse);

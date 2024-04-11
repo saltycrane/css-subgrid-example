@@ -38,3 +38,11 @@
   outline: 1px solid #ccc;
   padding: 2px 6px;
 }
+
+.headerRows {
+  position: sticky;
+  top: 0;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
